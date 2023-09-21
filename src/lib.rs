@@ -20,7 +20,7 @@ use std::{
 };
 use openssl::ssl::SslStream;
 
-type CallbackUnion = Box<dyn Fn(TcpStream, SocketAddrV4) -> Result<(), Box<dyn Error>> + Send>;
+pub type CallbackUnion = Box<dyn Fn(TcpStream, SocketAddrV4) -> Result<(), Box<dyn Error>> + Send>;
 
 pub const IP: Ipv4Addr = Ipv4Addr::UNSPECIFIED;
 
